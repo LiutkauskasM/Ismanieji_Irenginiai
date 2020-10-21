@@ -43,7 +43,8 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun openPersonalRecipes(view : View) {
-        val intent = Intent(this, PersonalRecipesFragment::class.java)
+        val intent = Intent(this, PersonalRecipes::class.java)
         startActivity(intent)
     }
+
 }

@@ -9,23 +9,5 @@
         android:id="@+id/FirstFragment"
         android:name="com.example.cookingapp.FirstFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.cookingapp.PersonalRecipesFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-        <action
-            android:id="@+id/action_SecondFragment_to_addPersonalRecipeActivity"
-            app:destination="@id/addPersonalRecipeActivity" />
-    </fragment>
-    <activity
-        android:id="@+id/addPersonalRecipeActivity"
-        android:name="com.example.cookingapp.AddPersonalRecipeActivity"
-        android:label="activity_add_personal_recipe"
-        tools:layout="@layout/activity_add_personal_recipe" />
+        tools:layout="@layout/fragment_first"/>
 </navigation>
