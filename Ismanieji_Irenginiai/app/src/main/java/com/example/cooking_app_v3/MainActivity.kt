@@ -1,9 +1,9 @@
 package com.example.cooking_app_v3
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,13 +16,18 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun OpenAddRecipyActivity(view: View) {
-        val intent = Intent(this, AddRecipeActivity::class.java)
-        startActivity(intent)
-    }
+
 
     fun openAboutActivity(view: View) {
         val intent = Intent(this, AboutActivity::class.java)
         startActivity(intent)
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(resultCode== RESULT_OK){
+
+        }
+    }
+
 }

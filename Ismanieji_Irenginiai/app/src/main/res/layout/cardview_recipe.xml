@@ -6,7 +6,7 @@
     android:layout_margin="5dp"
     android:layout_marginStart="4dp"
     android:layout_marginTop="16dp"
-    android:layout_marginEnd="4dp"
+    android:layout_marginEnd="10dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
@@ -27,14 +27,42 @@
             android:layout_height="150dp"
             android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/recipeName"
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@android:drawable/ic_menu_edit"
+                    android:id="@+id/edit_btn_id" />
+            <ImageButton
+                    android:id="@+id/delete_btn_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="right"
+                    app:layout_constraintLeft_toRightOf="@id/cardview_recipe_title_id"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/surname_text"
+                    app:layout_constraintTop_toBottomOf="@+id/recipe_img_id"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_delete" />
+
+            <TextView
+
+                    android:id="@+id/cardview_recipe_title_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/recipeName"
             />
+        </LinearLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

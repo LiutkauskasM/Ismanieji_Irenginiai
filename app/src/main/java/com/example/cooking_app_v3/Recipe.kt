@@ -1,8 +1,5 @@
 package com.example.cooking_app_v3
 
-import android.widget.ImageView
-import android.widget.TextClock
-import android.widget.TextView
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 

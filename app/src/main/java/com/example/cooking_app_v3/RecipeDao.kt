@@ -1,13 +1,13 @@
 package com.example.cooking_app_v3
 
 import androidx.room.*
-import io.reactivex.Single
 import io.reactivex.Completable
+import io.reactivex.Single
 
 @Dao
 interface RecipeDao {
     @Insert
-    fun insert(recipe:Recipe):Completable
+    fun insert(recipe:Recipe):Single<Long>
 
     @Delete
     fun delete(recipe:Recipe) :Completable
